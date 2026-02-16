@@ -3,14 +3,15 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to. Ensure <div id='root'></div> exists in index.html");
-}
+const container = document.getElementById('root');
 
-const root = createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+if (!container) {
+  console.error("Failed to find the root element. Ensure index.html has <div id='root'></div>.");
+} else {
+  const root = createRoot(container);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}

@@ -1,10 +1,11 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
 export const getCollegeMatchResponse = async (studentInfo: string) => {
   try {
+    // Initialize exactly as per SDK guidelines using process.env.API_KEY
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: `You are an expert engineering admission counselor for West Bengal. 
@@ -15,6 +16,7 @@ export const getCollegeMatchResponse = async (studentInfo: string) => {
       
       Tone: Professional, encouraging but realistic.`,
     });
+    
     return response.text;
   } catch (error) {
     console.error("Gemini API error:", error);
