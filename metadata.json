@@ -1,0 +1,8 @@
+{
+  "name": "IEM Kolkata Admission Portal 2026",
+  "description": "High-converting, SEO-optimized landing page for IEM Kolkata B.Tech Admission 2026, featuring AI-powered eligibility tools and comprehensive fee/cutoff guides.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
