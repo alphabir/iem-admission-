@@ -21,15 +21,15 @@ const App: React.FC = () => {
   const WHATSAPP_LINK = "https://wa.me/919382082728?text=Hi!%20I%20am%20interested%20in%20IEM%20Kolkata%20B.Tech%20Admission%202026.";
 
   return (
-    <div className="relative bg-[#050507] text-gray-200 selection:bg-indigo-500 selection:text-white min-h-screen">
-      {/* High-Voltage Urgency Bar */}
+    <div className="relative bg-white text-slate-900 min-h-screen">
+      {/* High-Impact Trust Banner */}
       {isUrgencyVisible && (
-        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white py-3 px-4 text-center sticky top-0 z-[100] flex justify-center items-center gap-4 shadow-[0_4px_20px_rgba(79,70,229,0.4)]">
-          <span className="font-black text-[10px] md:text-xs tracking-[0.2em] uppercase flex items-center gap-2">
-            <span className="w-2 h-2 bg-red-500 rounded-full animate-ping"></span>
-            Critical: CSE Seat Matrix for 2026 Batch is now Live!
+        <div className="bg-indigo-600 text-white py-3 px-4 text-center sticky top-0 z-[100] flex justify-center items-center gap-4 shadow-lg">
+          <span className="font-bold text-[11px] md:text-sm tracking-wide flex items-center gap-2">
+            <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
+            NOTICE: IEM Kolkata B.Tech 2026 Registration Portal is Now Live
           </span>
-          <button onClick={() => setIsUrgencyVisible(false)} className="hover:rotate-90 transition-transform p-1 text-white/70">
+          <button onClick={() => setIsUrgencyVisible(false)} className="hover:scale-110 transition-transform p-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>
@@ -42,71 +42,69 @@ const App: React.FC = () => {
           <Hero onOpenMatchTest={() => setShowMatchTest(true)} />
         </section>
 
-        {/* Global CTA Break */}
-        <div className="flex justify-center -mt-8 mb-20 relative z-20">
+        {/* Floating Action Component */}
+        <div className="flex justify-center -mt-10 mb-20 relative z-20">
           <button 
             onClick={() => document.getElementById('admission-query')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group bg-white text-black px-10 py-5 rounded-full font-black shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] flex items-center gap-3 uppercase italic tracking-tighter"
+            className="group bg-indigo-600 text-white px-12 py-5 rounded-2xl font-bold shadow-2xl hover:bg-indigo-700 transition-all hover:scale-105 flex items-center gap-3"
           >
-            Claim 2026 Seat Priority
+            Start Free Admission Support
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </button>
         </div>
 
-        <section id="about" className="py-24 bg-[#0a0a0c]">
+        <section id="about" className="py-24 bg-white">
           <About />
         </section>
 
-        <section id="eligibility" className="py-24 bg-[#050507]">
+        <section id="eligibility" className="py-24 bg-slate-50">
           <Eligibility />
         </section>
 
-        <section id="fees" className="py-24 bg-[#0a0a0c]">
+        <section id="fees" className="py-24 bg-white">
           <Fees />
         </section>
 
-        <section id="cutoffs" className="py-24 bg-[#050507]">
+        <section id="cutoffs" className="py-24 bg-slate-50">
           <Cutoffs />
         </section>
 
-        <section id="placements" className="py-24 bg-[#0a0a0c]">
+        <section id="placements" className="py-24 bg-white">
           <Placements />
         </section>
 
-        <section id="why-iem" className="py-32 bg-gradient-to-b from-[#0a0a0c] to-[#050507]">
+        <section id="why-iem" className="py-24 bg-indigo-900 text-white">
           <WhyChoose />
         </section>
 
-        <section id="comparison" className="py-24 bg-[#0a0a0c]">
+        <section id="comparison" className="py-24 bg-white">
           <Comparison />
         </section>
 
-        <section id="faq" className="py-24 bg-[#050507]">
+        <section id="faq" className="py-24 bg-slate-50">
           <FAQ />
         </section>
 
-        <section id="admission-query" className="py-32 bg-black relative">
-           <div className="absolute inset-0 bg-indigo-600/5 blur-[120px] rounded-full translate-y-1/2"></div>
+        <section id="admission-query" className="py-32 bg-white relative">
            <LeadForm />
         </section>
       </main>
 
       <Footer />
 
-      {/* AI Intelligence Modal */}
       {showMatchTest && (
         <CollegeMatchTest onClose={() => setShowMatchTest(false)} />
       )}
 
-      {/* Floating Gen Z WhatsApp - High Contrast Neon */}
+      {/* Modern Floating CTA */}
       <a 
         href={WHATSAPP_LINK}
         target="_blank" 
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 bg-[#25D366] text-white p-5 rounded-[2rem] shadow-[0_20px_50px_rgba(37,211,102,0.3)] hover:scale-110 transition-all z-50 flex items-center gap-3 group border-4 border-white/10"
+        className="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center gap-3 group border-4 border-white"
       >
-        <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.248 2.248 3.488 5.232 3.488 8.412 0 6.556-5.332 11.891-11.891 11.891-2.015 0-3.991-.511-5.741-1.482l-6.259 1.691zm6.05-4.471c1.556.924 3.082 1.411 4.78 1.411 5.011 0 9.091-4.079 9.091-9.091 0-2.431-.945-4.714-2.661-6.43-1.717-1.717-4.001-2.662-6.43-2.662-5.011 0-9.091 4.079-9.091 9.091 0 1.761.47 3.473 1.36 5.018l-.946 3.453 3.538-.956zm11.332-6.83c-.066-.109-.241-.175-.505-.307-.263-.132-1.558-.769-1.8-.857-.242-.088-.417-.132-.593.132-.175.263-.68.857-.834 1.032-.153.175-.307.198-.57.066-.263-.132-1.113-.41-2.12-1.309-.784-.699-1.314-1.562-1.468-1.826-.153-.263-.016-.406.115-.537.118-.118.263-.307.395-.461.132-.153.175-.263.263-.44.088-.175.044-.33-.022-.461-.066-.132-.593-1.428-.813-1.956-.214-.515-.43-.445-.593-.453-.153-.008-.33-.008-.505-.008-.175 0-.461.066-.702.33-.242.263-.923.901-.923 2.198 0 1.297.945 2.549 1.077 2.725.132.175 1.86 2.84 4.505 3.984.63.272 1.12.435 1.503.556.633.201 1.21.173 1.666.105.508-.076 1.558-.637 1.777-1.253.22-.615.22-1.143.153-1.253z"/></svg>
-        <span className="font-black text-xs tracking-widest hidden md:block">TALK TO EXPERT</span>
+        <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.248 2.248 3.488 5.232 3.488 8.412 0 6.556-5.332 11.891-11.891 11.891-2.015 0-3.991-.511-5.741-1.482l-6.259 1.691zm6.05-4.471c1.556.924 3.082 1.411 4.78 1.411 5.011 0 9.091-4.079 9.091-9.091 0-2.431-.945-4.714-2.661-6.43-1.717-1.717-4.001-2.662-6.43-2.662-5.011 0-9.091 4.079-9.091 9.091 0 1.761.47 3.473 1.36 5.018l-.946 3.453 3.538-.956zm11.332-6.83c-.066-.109-.241-.175-.505-.307-.263-.132-1.558-.769-1.8-.857-.242-.088-.417-.132-.593.132-.175.263-.68.857-.834 1.032-.153.175-.307.198-.57.066-.263-.132-1.113-.41-2.12-1.309-.784-.699-1.314-1.562-1.468-1.826-.153-.263-.016-.406.115-.537.118-.118.263-.307.395-.461.132-.153.175-.263.263-.44.088-.175.044-.33-.022-.461-.066-.132-.593-1.428-.813-1.956-.214-.515-.43-.445-.593-.453-.153-.008-.33-.008-.505-.008-.175 0-.461.066-.702.33-.242.263-.923.901-.923 2.198 0 1.297.945 2.549 1.077 2.725.132.175 1.86 2.84 4.505 3.984.63.272 1.12.435 1.503.556.633.201 1.21.173 1.666.105.508-.076 1.558-.637 1.777-1.253.22-.615.22-1.143.153-1.253z"/></svg>
+        <span className="font-bold text-sm hidden md:block">WhatsApp Expert</span>
       </a>
     </div>
   );

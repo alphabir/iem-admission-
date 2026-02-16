@@ -7,86 +7,62 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onOpenMatchTest }) => {
   return (
-    <div className="relative bg-[#0d0e12] overflow-hidden pt-24 pb-28 md:pt-40 md:pb-60">
-      {/* High-Fidelity Background FX */}
+    <div className="relative bg-white overflow-hidden pt-20 pb-20 md:pt-32 md:pb-40">
+      {/* Dynamic Light Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-indigo-600/25 blur-[160px] rounded-full animate-pulse"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-500/15 blur-[160px] rounded-full"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_transparent_0%,_#0d0e12_70%)] opacity-80"></div>
+        <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-indigo-100/50 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-blue-50/80 blur-[120px] rounded-full"></div>
         
-        {/* Animated Grid System */}
-        <div className="grid grid-cols-[repeat(20,minmax(0,1fr))] gap-px opacity-[0.04] pointer-events-none h-full w-full">
-          {[...Array(400)].map((_, i) => (
-            <div key={i} className="border-[0.5px] border-indigo-400/30 h-32"></div>
-          ))}
-        </div>
+        {/* Subtle Pattern */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#4f46e5 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full mb-10 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
-            <span className="flex h-2.5 w-2.5 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e] animate-pulse"></span>
-            <span className="text-white font-black text-[10px] md:text-xs tracking-[0.25em] uppercase">
-              Admission Protocol 2026: ACTIVE
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-indigo-50 border border-indigo-100 rounded-full mb-8 shadow-sm">
+            <span className="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
+            <span className="text-indigo-700 font-bold text-xs tracking-wider uppercase">
+              Admission Intake 2026: Open
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-[9rem] font-black text-white leading-[0.85] mb-12 tracking-tighter italic">
-            UPGRADE <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-300 via-indigo-500 to-purple-500 animate-gradient-x">YOUR TECH</span> <br/>
-            <span className="relative">
-              FUTURE @ IEM
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-indigo-500/30" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="4" /></svg>
-            </span>
+          <h1 className="text-5xl md:text-8xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+            Elevate Your <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Engineering</span> Career
           </h1>
           
-          <p className="text-lg md:text-2xl text-gray-400 mb-16 max-w-2xl mx-auto font-bold leading-relaxed uppercase tracking-tight">
-            Stop guessing. Start winning. Navigate WBJEE 2026 like a pro and secure your spot in Kolkata's premier tech launchpad.
+          <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+            IEM Kolkata B.Tech Admission 2026. Secure your seat in West Bengal's premier institute for CSE, IT, and specialized tech branches.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <button 
               onClick={onOpenMatchTest}
-              className="group relative bg-white text-black px-14 py-6 rounded-2xl font-black text-xl transition-all shadow-[0_20px_50px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95 uppercase italic tracking-tighter"
+              className="w-full sm:w-auto bg-indigo-600 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl hover:bg-indigo-700 hover:scale-105 active:scale-95"
             >
-              <span className="relative z-10">Check Eligibility 2026</span>
-              <div className="absolute inset-0 bg-indigo-100 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              Check My Eligibility
             </button>
             <button 
               onClick={() => document.getElementById('admission-query')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group bg-indigo-600/10 border-2 border-indigo-500/50 text-indigo-400 hover:bg-indigo-500 hover:text-white px-14 py-6 rounded-2xl font-black text-xl backdrop-blur-md transition-all active:scale-95 uppercase italic tracking-tighter"
+              className="w-full sm:w-auto bg-white border-2 border-slate-200 text-slate-700 hover:bg-slate-50 px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-sm active:scale-95"
             >
-              Free Counselling
+              Fee Structure
             </button>
           </div>
 
-          <div className="mt-24 flex flex-col items-center gap-8">
-            <div className="flex -space-x-4">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className="relative group">
-                  <img src={`https://i.pravatar.cc/150?u=iemstudent${i}`} className="w-14 h-14 rounded-full border-4 border-[#0d0e12] object-cover shadow-2xl transition-transform group-hover:-translate-y-2" alt="Student" />
-                  <div className="absolute inset-0 rounded-full border border-white/10 pointer-events-none"></div>
-                </div>
+          <div className="mt-16 flex flex-col items-center gap-6">
+            <div className="flex -space-x-3">
+              {[...Array(5)].map((_, i) => (
+                <img key={i} src={`https://i.pravatar.cc/100?u=iemstudent${i}`} className="w-12 h-12 rounded-full border-4 border-white shadow-md object-cover" alt="Student" />
               ))}
             </div>
             <div className="text-center">
-              <div className="text-white font-black text-xl tracking-tighter italic">JOIN 8,400+ ASPIRANTS</div>
-              <div className="text-indigo-500 text-[10px] font-black uppercase tracking-[0.4em] mt-2">Mission 2026 Recruitment Window Open</div>
+              <div className="text-slate-900 font-bold text-lg italic">8.4k+ Aspirants Guided for 2026</div>
+              <div className="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1">Join the Elite Tech Community</div>
             </div>
           </div>
         </div>
       </div>
-      
-      <style>{`
-        @keyframes gradient-x {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        .animate-gradient-x {
-          background-size: 200% 200%;
-          animation: gradient-x 15s ease infinite;
-        }
-      `}</style>
     </div>
   );
 };
